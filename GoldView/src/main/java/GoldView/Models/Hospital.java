@@ -1,26 +1,21 @@
 package GoldView.Models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="users")
-public class User {
+@Table(name="hospitals")
+public class Hospital {
 
 	@Id
-	@Column(name="firstname")
+	@Column(name="id")
 	@JsonProperty
-	private String firstName;
+	private Integer id;
 	
-	@Column(name="lastname")
+	@Column(name="name")
 	@JsonProperty
-	private String lastname;
-	
-	@Column(name="age")
-	@JsonProperty
-	private Integer	age;
+	private String name;
 }

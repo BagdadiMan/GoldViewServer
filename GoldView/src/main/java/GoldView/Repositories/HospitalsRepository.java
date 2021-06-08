@@ -1,9 +1,9 @@
 package GoldView.Repositories;
 
-import GoldView.Models.User;
+import GoldView.Models.Hospital;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UsersRepository extends JpaRepository<User, String> {
+public interface HospitalsRepository extends JpaRepository<Hospital, Integer> {
 }
