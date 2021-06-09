@@ -21,4 +21,9 @@ public class PatientsController {
     public List<Patient> GetPatientsByRoomId(@PathVariable Integer id){
         return this.patientsService.getPatientsByRoomId(id);
     }
+
+    @GetMapping("/{id}")
+    public Patient GetPatientById(@PathVariable String id) {
+        return this.patientsService.getPatientById(id);
+    }
 }

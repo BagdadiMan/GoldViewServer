@@ -16,4 +16,8 @@ public class PatientsService {
     public List<Patient> getPatientsByRoomId(Integer roomId){
         return this.patientsRepository.findByRoom_Id(roomId);
     }
+
+    public Patient getPatientById(String id) {
+        return this.patientsRepository.findById(id).get();
+    }
 }
