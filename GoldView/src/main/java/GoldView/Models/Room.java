@@ -26,8 +26,4 @@ public class Room {
     @ManyToOne
     @JoinColumn(name="department_id", nullable=false)
     private Department department;
-
-    @OneToMany(mappedBy = "room")
-    @JsonIgnore
-    private List<Patient> patients;
 }
