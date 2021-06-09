@@ -1,6 +1,5 @@
 package GoldView.Services;
 
-import GoldView.Models.Patient;
 import GoldView.Models.Ventilator;
 import GoldView.Repositories.PatientsRepository;
 import GoldView.Repositories.VentilatorsRepository;
@@ -31,4 +30,5 @@ public class VentilatorsService {
         ventilator.setPatient(null);
         return this.ventilatorsRepository.save(ventilator);
     }
+
 }

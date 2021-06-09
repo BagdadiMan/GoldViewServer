@@ -1,6 +1,5 @@
 package GoldView.Repositories;
 
-import GoldView.Models.Hospital;
 import GoldView.Models.Ventilator;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
