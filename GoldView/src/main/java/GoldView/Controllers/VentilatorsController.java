@@ -28,4 +28,9 @@ public class VentilatorsController {
     public Ventilator linkVentilatorToPatient(@RequestBody Ventilator ventilator) {
         return this.ventilatorsService.linkVentilatorToPatient(ventilator);
     }
+
+    @PatchMapping("/freePatient")
+    public Ventilator freeVentilatorFromPatient(@RequestBody Ventilator ventilator) {
+        return this.ventilatorsService.freeVentilatorFromPatient(ventilator);
+    }
 }

@@ -22,6 +22,11 @@ public class Ventilator {
     @JsonProperty
     private Patient patient;
 
+    public Patient getPatient() {
+        return patient;
+    }
+
+
     public void setDepartment(Department department) {
         this.department = department;
     }

@@ -1,13 +1,13 @@
 package GoldView.Models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "patients")
-public class Patient
-{
+public class Patient {
     @Id
     @Column(name = "id")
     @JsonProperty
@@ -44,6 +44,14 @@ public class Patient
     @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public String getId() {
+        return id;
+    }
 
     public void setDateToday() {
         this.releaseDate = new Date();
