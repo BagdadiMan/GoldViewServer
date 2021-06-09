@@ -17,7 +17,7 @@ public class Room {
 
     @Column(name = "number")
     @JsonProperty
-    private String number;
+    private String name;
 
     @Column(name = "beds_count")
     @JsonProperty
