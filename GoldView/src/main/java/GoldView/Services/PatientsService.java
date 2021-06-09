@@ -34,4 +34,12 @@ public class PatientsService {
     public Patient addPatient(Patient patient) {
         return this.patientsRepository.save(patient);
     }
+
+    public Integer numOfPetientByDepart(Integer id){
+        return this.patientsRepository.countByDepartment_Id(id);
+    }
+
+    public Integer numOfPetientByRoom(Integer id){
+        return this.patientsRepository.countByRoom_Id(id);
+    }
 }

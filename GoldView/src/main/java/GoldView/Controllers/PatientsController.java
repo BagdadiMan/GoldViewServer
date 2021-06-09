@@ -39,4 +39,14 @@ public class PatientsController {
     public Patient addNewPatient(@RequestBody Patient patient) {
         return this.patientsService.addPatient(patient);
     }
+
+    @GetMapping("/count/department/{id}")
+    public Integer numOfPetientByDepart(@PathVariable Integer id){
+        return this.patientsService.numOfPetientByDepart(id);
+    }
+
+    @GetMapping("/count/room/{id}")
+    public Integer numOfPetientByRoom(@PathVariable Integer id){
+        return this.patientsService.numOfPetientByRoom(id);
+    }
 }

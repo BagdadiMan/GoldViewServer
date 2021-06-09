@@ -20,4 +20,8 @@ public class RoomsService {
     public List<Room> getAllrooms(){
         return this.roomsRepository.findAll();
     }
+
+//    public Integer countFreeBedsInRoom(Room room){
+//
+//    }
 }
