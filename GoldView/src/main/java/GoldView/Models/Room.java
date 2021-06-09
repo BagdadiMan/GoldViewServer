@@ -1,5 +1,6 @@
 package GoldView.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
@@ -27,5 +28,6 @@ public class Room {
     private Department department;
 
     @OneToMany(mappedBy = "room")
+    @JsonIgnore
     private List<Patient> patients;
 }
