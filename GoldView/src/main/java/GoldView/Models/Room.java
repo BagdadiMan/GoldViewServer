@@ -25,5 +25,6 @@ public class Room {
 
     @ManyToOne
     @JoinColumn(name="department_id", nullable=false)
+    @JsonProperty
     private Department department;
 }

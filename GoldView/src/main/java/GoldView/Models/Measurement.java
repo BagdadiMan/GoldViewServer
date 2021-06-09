@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "measurements")
-@Inheritance
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Measurement {
 
     @Id
