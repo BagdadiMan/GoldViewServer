@@ -10,7 +10,7 @@ import java.util.List;
 public class HospitalsService {
 
     @Autowired
-    HospitalsRepository hospitalsRepository;
+    private HospitalsRepository hospitalsRepository;
 
     public List<Hospital> getAllHospitals() {
         return hospitalsRepository.findAll();

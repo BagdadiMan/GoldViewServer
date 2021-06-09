@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/hospitals")
 public class HospitalsController {
     @Autowired
-    HospitalsService hospitalsService;
+    private HospitalsService hospitalsService;
 
     @GetMapping("")
     public List<Hospital> getAllHospitals() {
