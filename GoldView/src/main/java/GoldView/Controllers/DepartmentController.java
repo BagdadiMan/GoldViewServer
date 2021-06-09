@@ -21,4 +21,9 @@ public class DepartmentController {
     public List<Department> getAllByHospitalId(@PathVariable Integer id) {
         return departmentService.getAllByHospitalId(id);
     }
+
+    @GetMapping("/all")
+    public List<Department> getAllDepartments(){
+        return this.departmentService.getAllDepartments();
+    }
 }

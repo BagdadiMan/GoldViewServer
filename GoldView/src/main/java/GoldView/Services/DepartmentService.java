@@ -16,4 +16,6 @@ public class DepartmentService {
     public List<Department> getAllByHospitalId(Integer id) {
         return departmentRepository.findByHospital_Id(id);
     }
+
+    public List<Department> getAllDepartments(){return this.departmentRepository.findAll();}
 }
