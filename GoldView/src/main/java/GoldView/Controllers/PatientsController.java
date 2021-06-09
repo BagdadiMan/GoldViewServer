@@ -32,7 +32,7 @@ public class PatientsController {
         return this.patientsService.getPatientById(id);
     }
 
-    @PostMapping("/realise/{id}")
+    @PostMapping("/release/{id}")
     public void ReleasePatient(@PathVariable String id) {
         this.patientsService.releasePatientById(id);
     }
