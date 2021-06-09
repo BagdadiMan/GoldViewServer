@@ -14,9 +14,11 @@ public class Ventilator {
 
     @OneToOne
     @JoinColumn(name = "department_id", referencedColumnName = "id")
+    @JsonProperty
     private Department department;
 
     @OneToOne
-    @JoinColumn(name = "patient_id", referencedColumnName = "id")
+    @JoinColumn(name = "patient", referencedColumnName = "id")
+    @JsonProperty
     private Patient patient;
 }
