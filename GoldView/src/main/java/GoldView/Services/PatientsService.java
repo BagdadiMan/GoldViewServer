@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PatientsService {
@@ -19,5 +20,11 @@ public class PatientsService {
 
     public Patient getPatientById(String id) {
         return this.patientsRepository.findById(id).get();
+    }
+
+    public void releasePatientById(String patientId){
+        Patient patient = this.patientsRepository.findById(patientId).get();
+        patient.setDateToday();
+        this.patientsRepository.save(patient);
     }
 }

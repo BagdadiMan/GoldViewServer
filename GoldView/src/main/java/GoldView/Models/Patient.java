@@ -44,4 +44,8 @@ public class Patient
     @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
+
+    public void setDateToday() {
+        this.releaseDate = new Date();
+    }
 }
