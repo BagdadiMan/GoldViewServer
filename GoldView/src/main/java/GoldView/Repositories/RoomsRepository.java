@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface RoomsRepository extends JpaRepository<Room, Integer> {
 
-    Room findByDepartment_Id(Integer deptnum);
+    List<Room> findByDepartment_Id(Integer deptnum);
 }

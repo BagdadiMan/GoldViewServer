@@ -13,7 +13,7 @@ public class RoomsService {
     @Autowired
     private RoomsRepository roomsRepository;
 
-    public Room findRoomByDeptNum(int id){
+    public List<Room> findRoomByDeptNum(int id){
         return this.roomsRepository.findByDepartment_Id(id);
     }
 

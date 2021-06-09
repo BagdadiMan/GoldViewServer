@@ -13,6 +13,7 @@ public class Measurement {
     @Id
     @Column(name = "id")
     @JsonProperty
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "measurement_date")
