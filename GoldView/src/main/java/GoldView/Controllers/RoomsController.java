@@ -15,7 +15,7 @@ public class RoomsController {
     @Autowired
     private RoomsService roomsService;
 
-    @GetMapping("/department/{id}") public Room findRoomByDeptNum(@PathVariable int id){
+    @GetMapping("/department/{id}") public List<Room> findRoomByDeptNum(@PathVariable int id){
         return this.roomsService.findRoomByDeptNum(id);
     }
 
