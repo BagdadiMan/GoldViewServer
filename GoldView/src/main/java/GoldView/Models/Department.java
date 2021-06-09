@@ -19,5 +19,6 @@ public class Department {
 
     @ManyToOne
     @JoinColumn(name = "hospital_id")
+    @JsonProperty
     private Hospital hospital;
 }
