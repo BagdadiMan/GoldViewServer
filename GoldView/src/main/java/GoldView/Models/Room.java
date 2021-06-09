@@ -3,6 +3,7 @@ package GoldView.Models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "rooms")
@@ -24,4 +25,7 @@ public class Room {
     @ManyToOne
     @JoinColumn(name="department_id", nullable=false)
     private Department department;
+
+    @OneToMany(mappedBy = "room")
+    private List<Patient> patients;
 }
