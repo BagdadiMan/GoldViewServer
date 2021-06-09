@@ -10,4 +10,5 @@ import java.util.List;
 public interface VentilatorsRepository extends JpaRepository<Ventilator, String> {
 
     List<Ventilator> findByPatientIsNull();
+    int countByPatientIsNull();
 }

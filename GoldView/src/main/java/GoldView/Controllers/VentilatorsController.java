@@ -30,4 +30,9 @@ public class VentilatorsController {
     public Ventilator freeVentilatorFromPatient(@RequestBody Ventilator ventilator) {
         return this.ventilatorsService.freeVentilatorFromPatient(ventilator);
     }
+
+    @GetMapping("/department/{id}/freeCount")
+    public int GetFreeCountByDepartment(@PathVariable int id) {
+        return ventilatorsService.GetFreeCountByDepartment(id);
+    }
 }

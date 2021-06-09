@@ -31,4 +31,7 @@ public class VentilatorsService {
         return this.ventilatorsRepository.save(ventilator);
     }
 
+    public int GetFreeCountByDepartment(int id) {
+        return this.ventilatorsRepository.countByPatientIsNull();
+    }
 }
