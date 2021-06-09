@@ -13,11 +13,19 @@ public class PatientsService {
     @Autowired
     private PatientsRepository patientsRepository;
 
-    public List<Patient> getPatientsByRoomId(Integer roomId){
+    public List<Patient> getPatientsByRoomId(Integer roomId) {
         return this.patientsRepository.findByRoom_Id(roomId);
     }
 
     public Patient getPatientById(String id) {
         return this.patientsRepository.findById(id).get();
+    }
+
+    public List<Patient> findPatientInHospitalization() {
+        return this.patientsRepository.findByReleaseDateIsNull();
+    }
+
+    public Patient addPatient(Patient patient) {
+        return this.patientsRepository.save(patient);
     }
 }

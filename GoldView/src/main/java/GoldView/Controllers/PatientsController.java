@@ -7,10 +7,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/patients")
 public class PatientsController {
 
@@ -25,5 +29,15 @@ public class PatientsController {
     @GetMapping("/{id}")
     public Patient GetPatientById(@PathVariable String id) {
         return this.patientsService.getPatientById(id);
+    }
+
+    @GetMapping("/hospitalization")
+    public List<Patient> findPatientInHospitalization () {
+        return this.patientsService.findPatientInHospitalization();
+    }
+
+    @PostMapping("")
+    public Patient addNewPatient (@RequestBody Patient patient) {
+        return this.patientsService.addPatient(patient);
     }
 }

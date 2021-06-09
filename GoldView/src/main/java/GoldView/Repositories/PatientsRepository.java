@@ -10,4 +10,5 @@ import java.util.List;
 public interface PatientsRepository extends JpaRepository<Patient, String> {
 
     List<Patient> findByRoom_Id(Integer id);
+    List<Patient> findByReleaseDateIsNull();
 }
