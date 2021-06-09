@@ -21,4 +21,12 @@ public class Ventilator {
     @JoinColumn(name = "patient", referencedColumnName = "id")
     @JsonProperty
     private Patient patient;
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
 }

@@ -17,4 +17,9 @@ public class VentilatorsService {
     public List<Ventilator> findAllFreeVentilators (){
         return this.ventilatorsRepository.findByPatientIsNull();
     }
+
+    public Ventilator linkVentilatorToPatient(Ventilator ventilator) {
+        ventilator.setDepartment(null);
+        return this.ventilatorsRepository.save(ventilator);
+    }
 }
