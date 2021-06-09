@@ -27,4 +27,8 @@ public class Room {
     @JoinColumn(name="department_id", nullable=false)
     @JsonProperty
     private Department department;
+
+    public Department getDepartment() {
+        return department;
+    }
 }

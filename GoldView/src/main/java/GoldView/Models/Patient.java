@@ -44,4 +44,12 @@ public class Patient
     @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public String getId() {
+        return id;
+    }
 }
