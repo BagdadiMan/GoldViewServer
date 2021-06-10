@@ -26,8 +26,8 @@ public class PatientsController {
     }
 
     @PostMapping("/release/{id}")
-    public void ReleasePatient(@PathVariable String id) {
-        this.patientsService.releasePatientById(id);
+    public Patient ReleasePatient(@PathVariable String id) {
+        return this.patientsService.releasePatientById(id);
     }
 
     @GetMapping("/hospitalization")
@@ -40,10 +40,10 @@ public class PatientsController {
         return this.patientsService.addPatient(patient);
     }
 
-    @GetMapping("/count/department/{id}")
-    public Integer numOfPetientByDepart(@PathVariable Integer id){
-        return this.patientsService.numOfPetientByDepart(id);
-    }
+//    @GetMapping("/count/department/{id}")
+//    public Integer numOfPetientByDepart(@PathVariable Integer id){
+//        return this.patientsService.numOfPetientByDepart(id);
+//    }
 
     @GetMapping("/count/room/{id}")
     public Integer numOfPetientByRoom(@PathVariable Integer id){

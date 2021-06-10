@@ -21,10 +21,10 @@ public class PatientsService {
         return this.patientsRepository.findById(id).get();
     }
 
-    public void releasePatientById(String patientId) {
+    public Patient releasePatientById(String patientId) {
         Patient patient = this.patientsRepository.findById(patientId).get();
         patient.setDateToday();
-        this.patientsRepository.save(patient);
+        return this.patientsRepository.save(patient);
     }
 
     public List<Patient> findPatientInHospitalization() {
@@ -35,9 +35,9 @@ public class PatientsService {
         return this.patientsRepository.save(patient);
     }
 
-    public Integer numOfPetientByDepart(Integer id){
-        return this.patientsRepository.countByDepartment_Id(id);
-    }
+//    public Integer numOfPetientByDepart(Integer id){
+//        return this.patientsRepository.countByDepartment_Id(id);
+//    }
 
     public Integer numOfPetientByRoom(Integer id){
         return this.patientsRepository.countByRoom_Id(id);

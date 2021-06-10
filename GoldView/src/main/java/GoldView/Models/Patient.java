@@ -38,7 +38,7 @@ public class Patient {
     private Date receptionDate;
 
     @Column(name = "release_date")
-    @JoinColumn
+    @JsonProperty
     private Date releaseDate;
 
     @ManyToOne

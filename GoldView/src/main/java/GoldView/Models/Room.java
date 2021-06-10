@@ -31,4 +31,12 @@ public class Room {
     public Department getDepartment() {
         return department;
     }
+
+    public int bedsCount() {
+        return bedsCount;
+    }
+
+    public Integer id() {
+        return id;
+    }
 }

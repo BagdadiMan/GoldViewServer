@@ -11,7 +11,6 @@ public interface PatientsRepository extends JpaRepository<Patient, String> {
 
     List<Patient> findByRoom_Id(Integer id);
     List<Patient> findByReleaseDateIsNull();
-    Integer countByDepartment_Id(Integer id);
     Integer countByRoom_Id(Integer id);
-    Integer countByRoom_IdAndRelease_DateIsNull(Integer id);
+    //Integer countByRoom_IdAndRelease_DateIsNotNull(Integer id);
 }
